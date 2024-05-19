@@ -8,6 +8,7 @@ string codiceFiscale;
 bool isConiugato;
 };
 Persona dipendente;
+
 Modificare la struttura Persona per rappresentare l’indirizzo come una struttura formata
 dai campi: via, CAP, Comune.*/
 
