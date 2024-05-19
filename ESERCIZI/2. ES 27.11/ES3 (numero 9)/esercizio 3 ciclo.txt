@@ -1,0 +1,33 @@
+/*Dati in ingresso N numeri interi,  stampare se viene immesso il numero 9.*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num; // numeri da elaborare
+    int N;   // quantità di numeri da elaborare
+
+    cout << "Inserisci N: ";
+    cin >> N;
+    
+    if(N<=0){
+    cout<<"inserisci una quantità valida!!: "<<endl;
+    
+    }else{
+        for(int i=0;i<N;i++){
+
+           cout<< "inserisci un numero: ";
+           cin >> num;
+
+            if(num != 9){
+            cout << "errore "<<endl;
+                 
+            }else{
+                  cout <<num<< endl;
+                  break;
+                }
+            }
+        }
+    return 0;
+}

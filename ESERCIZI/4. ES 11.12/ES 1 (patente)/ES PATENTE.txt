@@ -1,0 +1,23 @@
+/*In Italia si può prendere la patente B se si ha almeno 18 anni. Progettare un programma
+che inserito in input l’età indichi se l’utente puo’ conseguire la patente.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //dichiarazione variabili
+    int eta;
+    //input dati
+    cout<<"inserisci la tua età: ";
+    cin>> eta;
+    
+    if(eta<18){
+        cout<<"non sei hai un età consona"<<endl;
+    }else{
+        cout<<"hai un età sufficente per conseguire la patente"<<endl;
+        
+    }
+    return 0;
+}

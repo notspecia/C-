@@ -1,0 +1,42 @@
+/*Un negoziante per ogni spesa di importo superiore a 100 € effettua uno sconto del 5%, 
+del 10% per ogni spesa superiore a 300 €. Scrivere un programma che richieda all'utente l'ammontare della spesa 
+e visualizzi quindi l'importo effettivo da pagare.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //dichiarazione variabili
+    float imp;
+    float przsc;
+    float pf;
+    
+    //inizializzazione variabile
+    
+    cout<< "inserisci l'importo: "; 
+    cin>> imp;
+    
+    //condizioni
+    if (imp >= 300){
+        przsc= (imp*10)/100;
+        pf= imp-przsc;
+        
+        cout<< "il prezzo finale è: "<< pf << endl;
+        
+    } else if (imp >= 100) {
+        przsc= (imp*5)/100;
+        pf= imp-przsc;
+        
+        cout<< "il prezzo finale è: "<< pf << endl;
+        
+    } else{
+        
+        cout<< "il prezzo finale è: "<< imp << endl;
+            
+    }
+    
+    return 0;
+}
+

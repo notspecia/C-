@@ -1,0 +1,64 @@
+/*Realizzare un programma che chieda all’utente di inserire due numeri reali e permetta
+all’utente di scegliere quale operazione fare con i due numeri.*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+//dichiarazione variabili
+float n1;
+float n2;
+char operatore;
+float operazione;
+
+//input utenti
+cout<<"inserisci il valore del primo numero reale: ";
+cin>>n1;
+
+cout<<"inserisci il valore del secondo numero reale: ";
+cin>>n2;
+
+cout<<"inserisci l'operatore che vuoi utilizzare (+, -, *, /): ";
+cin>>operatore;
+
+//switch per fare le operazioni
+switch(operatore){
+    case '+':
+    operazione = n1 + n2;
+    cout<<"la somma dei tuoi numeri è di: "<<operazione<<endl;
+    break;
+   
+    case '-':
+    operazione = n1 - n2;
+    cout<<"la differenza dei tuoi numeri è di: "<<operazione<<endl;
+    break;
+   
+     case '*':
+    operazione = n1 * n2;
+    cout<<"la moltiplicazione dei tuoi numeri è di: "<<operazione<<endl;
+    break;
+
+//tenere conto dell'impossibile e dell'indeterminato
+     case '/':
+     if(n1==0 && n2==0){
+     cout<<"indeterminato!!!"<<endl;
+     break;
+     }else if(n2==0){
+     cout<<"impossibile!!!"<<endl;
+     break;
+     }else{
+     operazione = n1 / n2;
+     cout<<"la divisione dei tuoi numeri è di: "<<operazione<<endl;
+     break;
+     }
+   
+    cout<<"la divisione dei tuoi numeri è di: "<<operazione<<endl;
+    break;
+   
+    default:
+    cout<<"ERRORE!"<<endl;
+}
+    return 0;
+}
+

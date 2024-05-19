@@ -1,0 +1,54 @@
+/*Su una linea ferroviaria, rispetto alla tariffa piena, gli utenti pensionati usufruiscono di uno sconto del 10%, gli studenti del 15% e i disoccupati del 25%. Codificando i pensionati con un 1, gli studenti con un 2 e i disoccupati con una 3, scrivere un programma che, richiesto il costo di un biglietto 
+e l'eventuale condizione particolare dell'utente, visualizzi l'importo da pagare.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   //dichiarazione variabili
+   double importo;
+   float x;
+   double przsc;
+   double przf;
+
+cout<< "inserisci l'importo: "; 
+    cin>> importo; 
+    
+    cout<< "di che categoria fai parte? se sei pensionato premi 1, se sei un giovane premi 2, se sei disoccupato premi 3:  "; 
+    cin>> x;
+    
+    //inizio codifica
+
+    //sconto pensionati
+    if (x==1){
+        przsc = (importo*10)/100;
+        przf = importo-przsc;
+       
+        cout<< "dato che sei un pensionato, avrai uno sconto del 10%, il prezzo da pagare è: "<< przf << endl; 
+        
+    //sconto giovani
+         } else if (x==2){ 
+             przsc = (importo*15)/100;
+             przf = importo-przsc;
+       
+             cout<< "dato che sei un giovane, avrai uno sconto del 15%, il prezzo da pagare è: "<< przf << endl; 
+            
+
+    //sconto disoccupati
+         } else if (x==3){ 
+             przsc = (importo*25)/100;
+             przf = importo-przsc;
+       
+             cout<< "dato che sei un disoccupato, avrai uno sconto del 25%, il prezzo da pagare è: "<< przf << endl; 
+             
+            }else if (x<=0||x>3){
+        
+        cout<< "inserisci una categoria VALIDA!!"<< endl; 
+        
+            
+         }
+    
+    return 0;
+}

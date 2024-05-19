@@ -1,0 +1,33 @@
+/*Inseriti tre numeri A, B e C dire se B è compreso in senso stretto tra A e C.*/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  //dichiarazione variabili
+  float a;
+  float b;
+  float c;
+  
+  //inpunt utenti
+  cout<<"dai un valore ad A: ";
+  cin>>a;
+
+  cout<<"dai un valore ad B: ";
+  cin>>b;
+  
+  cout<<"dai un valore ad C: ";
+  cin>>c;
+  
+  if(b>a && c>b){
+      cout<<"il valore B " <<(b)<< " è compreso fra A e C"<<endl;
+      
+  }else{
+        cout<<"il valore B " <<(b)<< " non è compreso fra A e C"<<endl;
+      
+  }
+    return 0;
+}

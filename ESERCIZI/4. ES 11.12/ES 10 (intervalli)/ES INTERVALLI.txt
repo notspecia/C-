@@ -1,0 +1,30 @@
+/*Realizzare un programma che chieda all’utente di inserire un numero intero. Il programma
+deve riconoscere se tale numero è interno ad uno dei seguenti intervalli:
+➔ [15,18] --> da 15 a 18 con 15 e 18 inclusi.
+➔ [39,45) --> da 39 a 45 con 39 incluso e 45 escluso.
+➔ (91,103) --> da 91 a 103 con 91 e 103 esclusi.
+Esempi:
+Utente inserisce 42 --> “Il numero 42 è valido”.
+Utente inserisce 32 --> “Il numero 32 inserito non è valido”.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+//dichiarazione variabili
+ float num;
+
+//input utenti
+ cout<<"inserisci un numero: ";
+ cin>>num;
+ 
+//vedere se il numero fa parte del ciclo
+ if((15<=num && num<=18) || (39<=num && num<45) || (91<num && num<103)){
+     cout<<"fa parte dell'intervallo"<<endl;
+ }else{
+     cout<<"non fa parte dell'intervallo"<<endl;
+ }
+    return 0;
+}

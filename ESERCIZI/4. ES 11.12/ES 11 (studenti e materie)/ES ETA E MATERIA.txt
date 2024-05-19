@@ -1,0 +1,59 @@
+/*Realizzare un programma che chieda all’utente di inserire l’età e la materia di studio. La
+materia di studio viene rappresentata utilizzando il seguente prospetto:
+➔ 1 -> Informatica
+➔ 2 -> Fisica
+➔ 3 -> Matematica
+In output si deve mostrare un messaggio simile ai seguenti:
+➔ "Ciao, hai 20 anni e studi Informatica."
+➔ "Ciao, hai 22 anni e studi Matematica."*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+//dichiarazione variabili
+    int eta;
+    int materia;
+    
+//input utenti 1
+    
+    cout<<"inserisci la tua età: ";
+    cin>>eta;
+    
+//conferma della tua età
+
+    while(eta>100 || eta<0 ){
+    cout<<"inserisci una data di nascita valida!!: ";
+    cin>>eta;
+    }
+    
+//input utenti 2
+    
+     cout<<"se studi Informatica premi 1, se studi Fisica premi 2, se studi Matematica premi 3: "<<endl;
+     cin>>materia;
+     
+//switchcase per materia
+
+    switch(materia){
+        
+        case 1:
+        materia = 1;
+        cout<<"ciao! hai "<<eta<<" anni, e studi Informatica!"<<endl;
+        break;
+        
+        case 2:
+        materia = 2;
+        cout<<"ciao! hai "<<eta<<" anni, e studi Fisica!"<<endl;
+        break;
+        
+        case 3:
+        materia = 3;
+        cout<<"ciao! hai "<<eta<<" anni, e studi Matematica!"<<endl;
+        break;
+        
+        default:
+        cout<<"ciao! hai "<<eta<<" anni, ma non studi nessuna materia!"<<endl;
+    }
+    return 0;
+}

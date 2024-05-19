@@ -1,0 +1,54 @@
+/*Dato l’articolo 142 del Codice della strada:
+➔ Chiunque non osserva i limiti minimi di velocità ovvero supera i limiti massimi
+di velocità di non oltre 10 km/h, è soggetto alla sanzione amministrativa del
+pagamento di una somma da euro 36.
+➔ Chiunque supera di oltre 10 km/h e di non oltre 40 km/h i limiti massimi di velocità è
+soggetto alla sanzione amministrativa del pagamento di una somma di euro 148.
+➔ Chiunque supera di oltre 40 km/h ma non di oltre 60 km/h i limiti massimi di velocità
+è soggetto alla sanzione amministrativa del pagamento di una somma di euro
+370.
+➔ Chiunque supera di oltre 60 km/h i limiti massimi di velocità è soggetto alla sanzione
+amministrativa del pagamento di una somma da euro 500.
+Si progetti un algoritmo che legga in input la velocità massima consentita e la velocità
+rilevata e stampi un messaggio del tipo:
+"Limite rispettato" oppure "Limite violato e la multa da pagare è ...".*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+//dichiarazione variabili
+    int velocitaMax;
+    int velocita;
+    int differenzaVelocita;
+
+//inizializzazione variabili
+    differenzaVelocita = 0;
+
+//input del limite massimo di velocita e della velocita rilevata
+    cout << "Inserisci il limite massimo di velocita: ";
+    cin >> velocitaMax;
+
+    cout << "Inserisci la velocita rilevata: ";
+    cin >> velocita;
+
+//differenza tra la velocita rilevata e il limite massimo di velocità
+    differenzaVelocita = velocita - velocitaMax;
+
+// Verifica delle condizioni e applicazione delle sanzioni
+    if(differenzaVelocita <=0){
+        cout<<"limite di velocita rispettato"<<endl;
+    }else if(differenzaVelocita <= 10){
+        cout << "multa di una somma di 36€." <<endl;
+    }else if(differenzaVelocita <= 40){
+        cout << "multa di una somma di 148€." <<endl;
+    }else if(differenzaVelocita <= 60){
+        cout << "multa di una somma di euro 370€." <<endl;
+    }else{
+        cout << "multa di una somma di 500€." <<endl;
+    }
+
+    return 0;
+}

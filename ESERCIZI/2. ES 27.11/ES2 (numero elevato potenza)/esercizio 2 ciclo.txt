@@ -1,0 +1,28 @@
+/*Calcolare la potenza di un numero elevato a n usando solo la moltiplicazione.*/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int numero;
+  int esponente;
+  int i;
+  int risultato = 1;
+
+  
+  cout<< "inserisci un numero: ";
+  cin>> numero;
+  
+   cout<< "inserisci un esponente: ";
+  cin>> esponente;
+  
+  for(i=0; i<esponente; i++){
+  risultato *= numero;
+  }
+   cout <<"il toale è: "<< risultato << endl;
+
+   return 0;
+}

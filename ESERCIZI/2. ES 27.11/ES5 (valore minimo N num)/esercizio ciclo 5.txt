@@ -1,0 +1,41 @@
+/*Calcolare e visualizzare il valore minimo di una serie di N misurazioni.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Dichiarazione variabili
+    int N;     // Quantità di misurazioni che si inseriscono
+    float num; // misurazione data in input
+    int i;     // Variabile indice del ciclo for
+    int minimo;// Valore minimo
+    
+    // Sezione di input Dati
+    cout << "Inserisci N: ";
+    cin >> N;
+    
+    if(N>0){ 
+        
+        cout << "Inserisci 1^ misura : ";
+        cin >> num;
+        minimo = num;
+        
+        for(i=1;i<N;i++){
+            cout << "Inserisci " << i+1 << "^ misura : ";
+            cin >> num;
+           
+            if(num < minimo){
+                minimo = num;
+           }
+        }
+        cout << "\n Valore minimo : " << minimo << endl;
+        
+    }else{
+        cout << "\n Il valore di N deve essere >=0\n";
+        
+    }
+    
+    return 0;
+}

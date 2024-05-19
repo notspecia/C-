@@ -1,0 +1,33 @@
+/*Dati in ingresso N numeri stampare se il  numero è divisibile per 3.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num; // numeri da elaborare
+    int N;   // quantità di numeri da elaborare
+
+    cout << "Inserisci N: ";
+    cin >> N;
+    
+    if(N<=0){
+    cout<<"inserisci una quantità valida!!: "<<endl;
+    
+    }else{
+        for(int i=0;i<N;i++){
+
+           cout<< "inserisci un numero: ";
+           cin >> num;
+
+           if(num%3 == 0){
+                cout << "DIVISIBILE\n";
+
+            }else{
+                cout << "NON DIVISIBILE\n";
+              }
+           }
+        }
+    return 0;
+}

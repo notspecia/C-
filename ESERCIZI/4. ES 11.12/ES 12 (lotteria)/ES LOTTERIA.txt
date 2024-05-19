@@ -1,0 +1,47 @@
+/*Realizzare un programma che legga in input la posizione del biglietto vincente ed indichi in
+output il valore della vincita.  */
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int biglietto;
+
+cout<<"inserisci la posizione del biglietto selezionto: ";
+cin>>biglietto;
+
+
+
+switch(biglietto){
+    case 1:
+    biglietto = 1;
+    cout<<"complimenti,hai vinto il primo premio: 5000000€!"<<endl;
+    break;
+   
+    case 2:
+    biglietto = 2;
+    cout<<"complimenti,hai vinto l secondo premio: 2000000€"<<endl;
+    break;
+   
+    case 3:
+    biglietto = 3;
+    cout<<"complimenti,hai vinto il terzo premio: 1000000€"<<endl;
+    break;
+   
+    case 4:
+    biglietto = 4;
+    cout<<"complimenti,hai vinto il quarto premio 500000€"<<endl;
+    break;
+   
+    case 5:
+    biglietto = 5;
+    cout<<"complimenti,hai vinto il quinto premio 200000€"<<endl;
+    break;
+   
+    default:
+    cout<<"purtroppo non hai vinto!"<<endl;
+}
+    return 0;
+}
+

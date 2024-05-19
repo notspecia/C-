@@ -1,0 +1,69 @@
+/*Durante un esperimento di fisica, si ripete la misura del tempo di oscillazione di un
+pendolo per tre volte, ottenendo valori di volta in volta diversi. Per questo motivo,
+si decide di esprimere la misura attraverso il valor medio e di indicare l’incertezza
+mediante la semidispersione massima, cioè la semidifferenza tra i valori massimo e
+minimo: (t max – t min ) / 2. Scrivere un programma che, richiesti in input i tre tempi
+in secondi, visualizzi la misura completa nel formato: t medio ± incertezza Per
+esempio, inserendo i tempi: 4.5, 4.7, 4.6, l’output del programma deve essere: (4.6
+± 0.1) s.*/
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //dichiarazione variabili
+    float Try1;
+    float Try2;
+    float Try3;
+    float Tmin;
+    float Tmedio;
+    float Tmax;
+    float incertezza;
+    
+    //inizio codifica
+    cout<< "inserisci il tempo del primo tentativo: "; 
+    cin>> Try1; 
+    
+    cout<< "inserisci il tempo del secondo tentativo: "; 
+    cin>> Try2;
+    
+    cout<< "inserisci il tempo del terzo tentativo: "; 
+    cin>> Try3;
+    
+    //condizione tempi = 0
+    if((Try1<=0)||(Try2<=0)||(Try3<=0)) {
+        
+        cout<< "inserisci un tempo VALIDO: "<< endl; 
+        
+        } else {
+            
+            //tempo massimo
+             Tmax = Try1;
+             if(Try2>Tmax)
+             Tmax = Try2;
+             if(Try3>Tmax)
+             Tmax = Try3;
+             
+             //tempo minimo
+             Tmin = Try1;
+             if(Try2<Tmin)
+             Tmin = Try2;
+             if(Try3<Tmin)
+             Tmin = Try3;
+             
+         //calcolo Tmedio e incertezza
+             
+             Tmedio = (Try1+Try2+Try3)/3;
+             incertezza = (Tmax-Tmin)/2;
+             
+             cout<< "il tempo medio è di: "<<Tmedio<< endl; 
+             cout<< "il tempo completo è di: "<<Tmedio<< "+-"<< incertezza << endl; 
+        } 
+        
+            return 0;
+}

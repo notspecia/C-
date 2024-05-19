@@ -1,0 +1,32 @@
+/*Il programma letti tre numeri, determini se possono essere considerati in progressione
+aritmetica; una progressione aritmetica è una serie di numeri in cui la differenza tra due
+numeri successivi è costante.*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+//dichiarazione variabili
+int n1;
+int n2;
+int n3;
+
+//input utenti
+cout<<"inserisci il primo numero: ";
+cin>>n1;
+
+cout<<"inserisci il secondo numero: ";
+cin>>n2;
+
+cout<<"inserisci il terzo numero: ";
+cin>>n3;
+
+//condizione
+if((n1-n2)==(n2-n3)){
+    cout<<"è una progressione aritmetica"<<endl;
+}else{
+     cout<<"non è una progressione aritmetica"<<endl;
+}
+    return 0;
+}

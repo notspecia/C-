@@ -1,0 +1,41 @@
+/*La prima volta che l’uomo è andato sulla Luna è stato il 1969, creare un programma che
+chiede l’anno di nascita all’utente e gli risponde se è nato l’anno in cui l’uomo è andato
+sulla Luna o quanti anni prima o quanti anni dopo.*/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //dichiarazione variabili
+    int annoU;
+    int tempo;
+
+    //inizilizzazione variabili
+    tempo=0;
+
+    //input dati
+    cout<<"inserisci la tua data di nascita: ";
+    cin>> annoU;
+    
+    while(annoU<1900 || annoU>2023){
+        cout<<"inserisci una data di nascita valida!:";
+        cin>>annoU;
+    }
+    
+    if(annoU<1969){
+        tempo= 1969-annoU;
+        cout<<"sei nato "<<tempo<<" anno/i prima"<<endl;
+        
+    }else if(annoU==1969){
+        cout<<"sei nato nello stesso anno della scoperta della luna"<<endl;
+    
+    }else{
+        tempo=annoU-1969;
+         cout<<"sei nato "<<tempo<<" anno/i dopo"<<endl;
+        
+    }
+    return 0;
+}
