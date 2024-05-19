@@ -1,4 +1,4 @@
-# C++ COURSE VERSION 0.1
+# C++ ITALIAN COURSE VERSION 0.1
 
 During this course of C ++ I learned the following notions, going to practice with practical exercises that identify with reality:
 
